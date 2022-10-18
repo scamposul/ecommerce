@@ -9,6 +9,6 @@ export default configureStore({
         isLoading: isLoadingSlice,
         productList: productListSlice,
         purchases: purchasesSlice,
-        cart: cartSlice
+        cart: cartSlice,
     }
 })

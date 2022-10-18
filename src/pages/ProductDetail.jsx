@@ -44,7 +44,13 @@ const ProductDetail = () => {
 
   return (
     <div className="productDetail">
-      <h1>{productDetail?.title}</h1>
+      <div className="nav">
+        <p className="homeLabel">Home</p>
+        <br />
+        <p className="circle"><i class="fa-solid fa-circle"></i></p>
+        <br />
+        <p>{productDetail.title}</p>
+      </div>
       <div className="all">
         <div className="top">
           <div className="left">
@@ -55,26 +61,31 @@ const ProductDetail = () => {
             />
           </div>
           <div className="right">
-            <h2>${productDetail?.price}</h2>
+            <h1>{productDetail?.title}</h1>
             <h4>Category: {productDetail?.category.name}</h4>
             <p>{productDetail?.description}</p>
+            <p className="priceText">Price</p>
+            <p>
+              <h2>${productDetail?.price}</h2>
+            </p>
+            <div className="middle">
+              <div className="setQuantity">
+                <Button onClick={decrease}>-</Button>
+                <div className="quantity">{quantity}</div>
+                <Button onClick={() => setQuantity(quantity + 1)}>+</Button>
+              </div>
+              <div className="addToCart">
+                <Button onClick={() => addToCart()}>
+                  <i className="fa-solid fa-cart-plus" id="cartIcon"></i>
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
         <br />
-        <div className="middle">
-          <div className="setQuantity">
-            <Button onClick={decrease}>-</Button>
-            <div className="quantity">{quantity}</div>
-            <Button onClick={() => setQuantity(quantity + 1)}>+</Button>
-          </div>
-          <div className="addToCart">
-            <Button onClick={() => addToCart()}>
-              <i className="fa-solid fa-cart-plus" id="cartIcon"></i>
-            </Button>
-          </div>
-        </div>
         <br />
         <div className="bottom">
+          <h3>Related products</h3>
           <ul className="relatedProducts">
             {relatedProductsOnly.map((product) => (
               <li
@@ -82,7 +93,12 @@ const ProductDetail = () => {
                 onClick={() => navigate(`/product/${product.id}`)}
                 key={product.id}
               >
-                <img src={product.productImgs} alt="" width={"50%"} className='productImg'/>
+                <img
+                  src={product.productImgs}
+                  alt=""
+                  width={"50%"}
+                  className="productImg"
+                />
                 <br />
                 {product.title}
                 <br />${product.price}

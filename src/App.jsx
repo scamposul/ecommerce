@@ -33,6 +33,7 @@ function App() {
           <Route path="/sidebar" element={<CartSidebar />}/>
         </Route>
       </Routes>
+      <footer>All rights reserved to ©Lamaetuyacrazyshit</footer>
     </HashRouter>
   );
 }

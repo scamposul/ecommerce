@@ -49,9 +49,7 @@ const Home = () => {
   }
 
   return (
-    <div>
-      <h1>Home</h1>
-      <br />
+    <div className="home">
       <div className="categories">
         <Button onClick={() => setFilteredCategory(products)}>All</Button>
         {categories.map((category) => (
@@ -61,7 +59,8 @@ const Home = () => {
         ))}
       </div>
       <br />
-      <InputGroup className="mb-3">
+      <div className="browserInput">
+      <InputGroup className="mb-3 w-50">
         <Form.Control
           placeholder="Search product"
           onChange={(e) => setSearchValue(e.target.value)}
@@ -73,9 +72,10 @@ const Home = () => {
           id="button-addon2"
           onClick={searchProduct}
         >
-          Search
+          <i class="fa-solid fa-magnifying-glass"></i>
         </Button>
       </InputGroup>
+      </div>
       <ul className="productList">
         {filteredCategory.map((product) => (
           <li

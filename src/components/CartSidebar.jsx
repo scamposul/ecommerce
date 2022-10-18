@@ -17,7 +17,7 @@ const CartSidebar = ({ show, handleClose }) => {
   }
 
   const cart = useSelector((state) => state.cart);
-  const sumall = cart.map(item => +item.price).reduce((prev, curr) => prev + curr, 0);
+  const sumall = cart.map(item => +item.price * item.productsInCart?.quantity).reduce((prev, curr) => prev + curr, 0);
 
   return (
     <Offcanvas show={show} onHide={handleClose} placement="end">
@@ -31,6 +31,8 @@ const CartSidebar = ({ show, handleClose }) => {
               <Link to={`product/${product.id}`}>
                 <p>{product.title}</p>
                 <p>${product.price}</p>
+                <p> x {product.productsInCart?.quantity}</p>
+                <p>Total = {product.price * product.productsInCart?.quantity}</p>
             </Link>
               
             </ListGroup.Item>

@@ -1,4 +1,19 @@
+.home {
+    margin-top: 3rem;
+}
 
+.homeLabel {
+    cursor: pointer;
+}
+
+.homeLabel:hover {
+    color: rgb(59, 59, 143);
+}
+
+.browserInput {
+    display: flex;
+    justify-content: center;
+}
 
 .productList {
     display: grid;
@@ -18,6 +33,15 @@
     padding: 1rem;
     width: 30rem;
     margin: 1rem;
+    cursor: pointer;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    margin-right: 80rem;
+    gap: 1rem;
+    margin-top: 3rem;
 }
 
 .productDetail {
@@ -26,7 +50,6 @@
     justify-content: center;
     align-items: center;
     align-items: center;
-    margin: 6rem;
 }
 
 .categories {
@@ -51,8 +74,21 @@
     object-fit: contain;
 }
 
+.purchases {
+    margin-left: 6rem;
+    margin-right: 6rem;
+    margin-bottom: 3rem;
+}
+
 .productPurchased {
     cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.productPurchased:hover {
+    color: rgb(59, 59, 143);
 }
 
 li {
@@ -70,4 +106,10 @@ li {
     display: flex;
     flex-direction: row;
     width: 20rem;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    margin: 4rem;
 }

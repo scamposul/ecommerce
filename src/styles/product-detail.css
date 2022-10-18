@@ -2,9 +2,24 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 6rem;
+    margin: 2rem;
 }
 
+.productDetail {
+    margin-top: 3rem;
+}
+
+.nav {
+    margin-right: 80rem;
+    margin-left: 10rem;
+    gap: 1rem;
+}
+
+.circle {
+    margin-top: 0.4rem;
+    font-size: 0.5rem;
+    color: rgb(64, 64, 212);
+}
 
 .top {
     display: flex;
@@ -25,7 +40,9 @@
 }
 
 .right {
-    width: 30rem;
+    width: 40rem;
+    margin-top: 5rem;
+
 }
 
 .middle {
@@ -49,7 +66,7 @@
 
 .bottom {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 2rem;
 }
 
@@ -68,4 +85,9 @@
     width: 15rem;
     height: 15rem;
     object-fit: contain;
+}
+
+.priceText {
+    color: gray;
+    font-size: 1.5rem;
 }
