@@ -45,7 +45,7 @@ const ProductDetail = () => {
   return (
     <div className="productDetail">
       <div className="nav">
-        <p className="homeLabel">Home</p>
+        <p className="homeLabel" onClick={() => navigate('/')}>Home</p>
         <br />
         <p className="circle"><i class="fa-solid fa-circle"></i></p>
         <br />
