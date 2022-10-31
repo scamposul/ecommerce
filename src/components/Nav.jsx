@@ -6,10 +6,8 @@ import { Link, useNavigate } from "react-router-dom";
 import CartSidebar from "./CartSidebar";
 import { useState } from "react";
 import "../styles/nav-left.css"
-import { useDispatch } from "react-redux";
 
 const MyNav = () => {
-  const dispatch = useDispatch();
   const navigate = useNavigate();
   const logout = () => {
     localStorage.setItem("token", "");

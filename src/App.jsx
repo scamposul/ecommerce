@@ -25,15 +25,14 @@ function App() {
       <MyNav />
       {isLoading && <LoadingScreen />}
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/product/:id" element={<ProductDetail />} />
         <Route path="/login" element={<Login />} />
         <Route element={<ProtectedRoutes />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/product/:id" element={<ProductDetail />} />
           <Route path="/purchase" element={<Purchases />} />
-          <Route path="/sidebar" element={<CartSidebar />}/>
+          <Route path="/sidebar" element={<CartSidebar />} />
         </Route>
       </Routes>
-      <footer>All rights reserved to ©Lamaetuyacrazyshit</footer>
     </HashRouter>
   );
 }

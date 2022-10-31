@@ -49,13 +49,13 @@ const ProductDetail = () => {
         <br />
         <p className="circle"><i class="fa-solid fa-circle"></i></p>
         <br />
-        <p>{productDetail.title}</p>
+        <p>{productDetail?.title}</p>
       </div>
       <div className="all">
         <div className="top">
           <div className="left">
             <img
-              src={productDetail?.productImgs}
+              src={productDetail?.productImgs[0]}
               alt=""
               className="detailImg"
             />
@@ -94,7 +94,7 @@ const ProductDetail = () => {
                 key={product.id}
               >
                 <img
-                  src={product.productImgs}
+                  src={product.productImgs[0]}
                   alt=""
                   width={"50%"}
                   className="productImg"

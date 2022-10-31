@@ -13,10 +13,9 @@ const Login = () => {
   const navigate = useNavigate();
 
   const submit = (data) => {
-    console.log(data);
     axios
       .post(
-        `https://ecommerce-api-react.herokuapp.com/api/v1/users/login`,
+        `https://e-commerce-api.academlo.tech/api/v1/users/login`,
         data
       )
       .then((res) => {
@@ -52,6 +51,7 @@ const Login = () => {
               type="email"
               placeholder="email@example.com"
               {...register("email")}
+              defaultValue="john@gmail.com"
             />
           </Col>
         </Form.Group>
@@ -70,6 +70,7 @@ const Login = () => {
               type="password"
               placeholder="Password"
               {...register("password")}
+              defaultValue="john1234"
             />
           </Col>
         </Form.Group>

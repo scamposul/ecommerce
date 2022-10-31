@@ -9,8 +9,7 @@ const Purchases = () => {
   const purchases = useSelector((state) => state.purchases);
   const navigate = useNavigate();
 
-  console.log(purchases);
-
+console.log(purchases);
   useEffect(() => {
     dispatch(getPurchasesThunk());
   }, []);

@@ -14,14 +14,14 @@ export const cartSlice = createSlice({
 
 export const getCartThunk = () => (dispatch) => {
   return axios
-    .get(`https://ecommerce-api-react.herokuapp.com/api/v1/cart`, getConfig())
+    .get(`https://e-commerce-api.academlo.tech/api/v1/cart`, getConfig())
     .then((res) => dispatch(setCart(res.data.data.cart.products)));
 };
 
 export const addToCartThunk = (cart) => (dispatch) => {
   return axios
     .post(
-      `https://ecommerce-api-react.herokuapp.com/api/v1/cart`,
+      `https://e-commerce-api.academlo.tech/api/v1/cart`,
       cart,
       getConfig()
     )
@@ -31,7 +31,7 @@ export const addToCartThunk = (cart) => (dispatch) => {
 export const purchaseCartThunk = () => (dispatch) => {
   return axios
     .post(
-      `https://ecommerce-api-react.herokuapp.com/api/v1/purchases`,
+      `https://e-commerce-api.academlo.tech/api/v1/purchases`,
       {},
       getConfig()
     )
