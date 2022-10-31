@@ -1,3 +1,3 @@
 Link: https://scampodevecommerce.netlify.app/
-User: anselmo@gmail.com
-Password: anselmo1234
+User: john@gmail.com
+Password: john1234
